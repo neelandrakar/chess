@@ -17,3 +17,8 @@ chessDB.on('disconnected', () => {
 if (chessDB.readyState === 1) {
   console.log('mongoose chessDB is open');
 }
+
+const db = {};
+db['employee'] = shyamsteelModuleDB.model('employee', require('./employee.model'));
+
+module.exports = db;
