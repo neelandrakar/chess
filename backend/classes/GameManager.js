@@ -55,9 +55,10 @@ export class GameManager {
           }
 
         } else if (message.type == MOVE) {
+          console.log(`msg: `, message)
           const game = this.games.find(game => game.player1 == socket || game.player2 == socket);
           if (game) {
-            game.makeMove(socket, message.move);
+            game.makeMove(socket, message.payload.move);
           } else {
             console.log(`game is not found`)
           }

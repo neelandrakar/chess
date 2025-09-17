@@ -73,18 +73,20 @@ export class Game {
       return
     }
 
-    console.log('hello')
+    console.log('hello before sending socket')
 
     if (this.moveCount % 2 == 0) {
       this.player2.send(JSON.stringify({
         type: MOVE,
         payload: move
       }))
+      console.log(`sent from white`)
     } else {
       this.player1.send(JSON.stringify({
         type: MOVE,
         payload: move
       }))
+      console.log(`sent from black`)
     }
 
     this.moveCount++;
