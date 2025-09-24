@@ -28,6 +28,10 @@ const UserSchema = new Schema({
     type: Schema.Types.Boolean,
     default: false
   }
-})
+},
+  {
+    toJSON: { virtuals: true },
+  }
+)
 
 module.exports = UserSchema;

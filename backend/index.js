@@ -17,8 +17,9 @@ const app = express();
 //   });
 
 
-app.listen(process.env.PORT, `${process.env.IP}`, function () {
+app.listen(process.env.PORT, process.env.IP, function () {
   console.log(`Connected at ${process.env.PORT}`);
+
 });
 
 const wss = new WebSocketServer({ port: 8080 });
