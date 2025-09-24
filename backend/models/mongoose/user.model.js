@@ -23,7 +23,15 @@ const UserSchema = new Schema({
   created_on: {
     type: Schema.Types.Date,
     default: Date.now()
+  },
+  d_status: {
+    type: Schema.Types.Boolean,
+    default: false
   }
-})
+},
+  {
+    toJSON: { virtuals: true },
+  }
+)
 
 module.exports = UserSchema;

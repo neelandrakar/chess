@@ -19,6 +19,6 @@ if (chessDB.readyState === 1) {
 }
 
 const db = {};
-db['employee'] = shyamsteelModuleDB.model('employee', require('./employee.model'));
+db['userModel'] = chessDB.model('user', require('./user.model'));
 
 module.exports = db;
